@@ -15,7 +15,7 @@ puts response1.body if response1.is_a?(Net::HTTPSuccess)
 count = day
 
 while count >= day - 7 do
-  a = "http://192.168.1.35:9200/*" + b + "*"+ year + "." + month + "." + count.to_s + "*/_open"
+  a = "http://192.168.1.35:9200/*" + b + "*"+ year + "." + month + "." + count.to_s + "*/_close"
   print a
   uri = URI.parse(a)
   request = Net::HTTP::Post.new(uri)
