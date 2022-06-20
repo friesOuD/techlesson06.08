@@ -4,8 +4,8 @@ require 'uri'
 b = ARGV[0]
 
 t = Time.new(2019, 3, 29)
-day = t.day
-year = t.year.to_s
+day = t.strftime("%d").to_i
+year = t.strftime("%Y").to_s
 month = t.strftime("%m").to_s
 
 uriGet = URI.parse("http://192.168.1.35:9200/_cat/indices/*" + b + "*")
